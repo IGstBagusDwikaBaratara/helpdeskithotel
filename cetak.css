@@ -1,0 +1,108 @@
+:root{
+    --ink:#1a2430;
+    --muted:#5b6b7d;
+    --line:#c9d3dd;
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    padding:24px;
+    background:#fff;
+    color:var(--ink);
+    font:12.5px/1.45 "Segoe UI",system-ui,sans-serif;
+}
+.kontrol{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    margin-bottom:18px;
+}
+.kontrol button{
+    padding:9px 16px;
+    border:0;
+    border-radius:8px;
+    background:#0b7399;
+    color:#fff;
+    font:600 13px system-ui,sans-serif;
+    cursor:pointer;
+}
+.kontrol a{
+    color:var(--ink);
+}
+.kop{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding-bottom:12px;
+    margin-bottom:6px;
+    border-bottom:2px solid var(--ink);
+}
+.kop img{
+    height:56px;
+    width:auto;
+}
+h1{
+    margin:0;
+    font-size:20px;
+}
+.kop p{
+    margin:2px 0 0;
+    color:var(--muted);
+}
+h2{
+    margin:18px 0 6px;
+    font-size:14px;
+}
+table{width:100%;
+    border-collapse:collapse;
+    margin-bottom:6px;
+}
+th,td{
+    padding:5px 7px;
+    border:1px solid var(--line);
+    text-align:left;
+    vertical-align:top;
+}
+th{
+    background:#eef2f6;
+    font-weight:600;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+}
+.angka{
+    text-align:right;
+    white-space:nowrap;
+}
+.grid3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+.blok h2{
+    margin-top:14px;
+}
+thead{
+    display:table-header-group;
+}
+tr{
+    break-inside:avoid;
+}
+.foot{
+    margin-top:18px;
+    color:var(--muted);
+    font-size:11px;
+}
+@page{
+    size:A4;
+    margin:14mm;
+}
+@media print{
+    .kontrol{
+        display:none;
+    }
+    body{
+        padding:0;
+    }
+}

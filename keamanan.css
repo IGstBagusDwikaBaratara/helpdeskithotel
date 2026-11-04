@@ -1,0 +1,124 @@
+:root{
+  --bg:#eef2f6;
+  --surface:#fff;
+  --ink:#14202e;
+  --muted:#5b6b7d;
+  --line:#d5dde6;
+  --accent:#0b6e6e;
+  --accent-ink:#fff;
+  --danger:#b42318;
+  --danger-bg:#fdecea;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1823;
+    --surface:#17232f;
+    --ink:#e6edf4;
+    --muted:#93a3b5;
+    --line:#2a3a4a;
+    --accent:#4fc3c3;
+    --accent-ink:#06222a;
+    --danger:#ff8a80;
+    --danger-bg:#3a1a17;
+    color-scheme:dark;
+  }
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:400 16px/1.5 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+.loginwrap{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+.loginbox{
+    width:100%;
+    max-width:380px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:28px 24px;
+}
+.loginbox h1{
+    margin:0;
+    font-size:1.7rem;
+    line-height:1.1;
+    font-weight:800;
+    letter-spacing:-.02em;
+}
+.note{
+    color:var(--muted);
+    margin:6px 0 4px;
+    font-size:.93rem;
+}
+
+label{
+    display:block;
+    font-size:.88rem;
+    font-weight:500;
+    margin:14px 0 4px;
+}
+input{
+    width:100%;
+    font:inherit;
+    color:var(--ink);
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:10px;
+}
+:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+}
+
+button{
+    font:inherit;
+    cursor:pointer;
+    border-radius:8px;
+}
+.primary{
+    margin-top:20px;
+    width:100%;
+    background:var(--accent);
+    color:var(--accent-ink);
+    border:0;
+    padding:12px;
+    font-weight:700;
+}
+.primary:hover{
+    filter:brightness(1.08);
+}
+
+.lupa{
+    margin:16px 0 0;
+    text-align:center;
+    color:var(--muted);
+    font-size:.88rem;
+}
+.ok{
+    margin:12px 0 0;
+    padding:10px 12px;
+    border-radius:8px;
+    background:#e4f5ea;
+    color:#15803d;
+    font-size:.9rem;
+}
+.err{
+    margin:12px 0 0;
+    padding:10px 12px;
+    border-radius:8px;
+    background:var(--danger-bg);
+    color:var(--danger);
+    font-size:.9rem;
+}
